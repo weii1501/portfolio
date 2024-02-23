@@ -28,12 +28,12 @@ function HeroSection (props) {
           viewport={{ once: false, amount: 0.5 }}
           className='relative opacity-1 visible left-0 transition-all'
         >
-          <h5 className='text-[#666] font-semibold text-[20px]'>
+          <h5 className='text-[#666] font-medium text-[20px]'>
             Hello, I'm Vo Dac Luc
           </h5>
           <TypingText title='| Web Developer' textStyles='text-[44px] text-primary my-[24px] font-bold' />
           <p className='text-[17px] mb-[32px] text-secondary font-medium'>
-            I have more than 1-year experience in Modern Front-End Web Development and <br /> 4 months of Django-related technologies.
+            I have more than 1-year experience in Modern Front-End Web Development <br /> and 4 months of Django-related technologies.
           </p>
         </motion.div>
 
@@ -47,7 +47,7 @@ function HeroSection (props) {
               >
                 <FiFacebook
                   size={22}
-                  className='transition-all duration-500 hover:-translate-y-1/2 text-[#888888] hover:text-[#000]'
+                  className='transition-all duration-500 hover:-translate-y-[5px] text-[#888888] hover:text-[#000]'
                 />
               </a>
             </li>
@@ -60,7 +60,7 @@ function HeroSection (props) {
               >
                 <FaInstagram
                   size={22}
-                  className='transition-all duration-500 hover:-translate-y-1/2 text-[#888888] hover:text-[#000]'
+                  className='transition-all duration-500 hover:-translate-y-[5px] text-[#888888] hover:text-[#000]'
                 />
               </a>
             </li>
@@ -72,7 +72,7 @@ function HeroSection (props) {
             {/*  > */}
             {/*    <FiTwitter */}
             {/*      size={22} */}
-            {/*      className='transition-all duration-500 hover:-translate-y-1/2 text-[#888888] hover:text-[#000]' */}
+            {/*      className='transition-all duration-500 hover:-translate-y-[5px] text-[#888888] hover:text-[#000]' */}
             {/*    /> */}
             {/*  </a> */}
             {/* </li> */}
@@ -85,7 +85,7 @@ function HeroSection (props) {
               >
                 <FiGithub
                   size={22}
-                  className='transition-all duration-500 hover:-translate-y-1/2 text-[#888888] hover:text-[#000]'
+                  className='transition-all duration-500 hover:-translate-y-[5px] text-[#888888] hover:text-[#000]'
                 />
               </a>
             </li>
@@ -98,7 +98,7 @@ function HeroSection (props) {
               >
                 <FiLinkedin
                   size={22}
-                  className='transition-all duration-500 hover:-translate-y-1/2 text-[#888888] hover:text-[#000]'
+                  className='transition-all duration-500 hover:-translate-y-[5px] text-[#888888] hover:text-[#000]'
                 />
               </a>
             </li>

@@ -10,20 +10,20 @@ function SiteHeader (props) {
       className='w-full h-auto fixed top-0 left-0 z-50 bg-white shadow-md animate-fade-down animate-ease-out'
     >
       <div className='w-full static h-auto bg-transparent'>
-        <div className='flex items-center justify-between h-[80px] px-[40px]'>
-          <div className='w-auto h-auto'>
-            <a href='/'>
-              <img
-                src='/logo.webp'
-                alt='logo'
-                height={92}
-                width={37}
-                decoding='async'
-                loading='lazy'
-                className='w-full h-full text-transparent'
-              />
-            </a>
-          </div>
+        <div className='flex items-center justify-end h-[80px] px-[40px]'>
+          {/*<div className='w-auto h-auto'>*/}
+          {/*  <a href='/'>*/}
+          {/*    <img*/}
+          {/*      src='/logo.webp'*/}
+          {/*      alt='logo'*/}
+          {/*      height={92}*/}
+          {/*      width={37}*/}
+          {/*      decoding='async'*/}
+          {/*      loading='lazy'*/}
+          {/*      className='w-full h-full text-transparent'*/}
+          {/*    />*/}
+          {/*  </a>*/}
+          {/*</div>*/}
 
           <div className='h-auto p-0'>
             <div>
@@ -47,7 +47,7 @@ function SiteHeader (props) {
                           loading='lazy'
                           className='w-[18px] h-[18px] text-transparent mr-[12px] font-thin'
                         />
-                        <span className='font-semibold'>
+                        <span className='font-medium'>
                           {item.text}
                         </span>
                       </a>

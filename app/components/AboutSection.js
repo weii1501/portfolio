@@ -26,7 +26,7 @@ function AboutSection (props) {
 
         <div className='w-full h-auto flex pt-[60px]'>
           <motion.div
-            variants={fadeIn('right', 'tween', 0.2, 1)}
+            variants={fadeIn('right', 'tween', 0.2, 1.5)}
             className='w-[50%] h-auto'
           >
             <h3 className='text-[22px] mb-[15px] text-primary'>
@@ -64,7 +64,7 @@ function AboutSection (props) {
           <div className='w-[50%] pl-[120px]'>
             <div className='relative'>
               <motion.img
-                variants={fadeIn('left', 'tween', 0.2, 1)}
+                variants={fadeIn('left', 'tween', 0.2, 1.5)}
                 src='/cover.jpeg'
                 alt='cover'
                 loading='lazy'
@@ -73,7 +73,7 @@ function AboutSection (props) {
               />
 
               <motion.div
-                variants={fadeIn('up', 'tween', 0.2, 1)}
+                variants={fadeIn('up', 'tween', 0.2, 1.5)}
                 className='w-[250px] h-[250px] absolute -bottom-[50px] -left-[50px] z-10 rounded-full bg-[#34495e] flex items-center justify-center'
               >
                 <div className='text-center text-[35px] text-white font-bold'>
