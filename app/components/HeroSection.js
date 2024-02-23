@@ -33,7 +33,7 @@ function HeroSection (props) {
           </h5>
           <TypingText title='| Web Developer' textStyles='text-[44px] text-primary my-[24px] font-bold' />
           <p className='text-[17px] mb-[32px] text-secondary font-medium'>
-            I have more than 1-year experience in Modern Front-End Web Development and <br/> 4 months of Django-related technologies.
+            I have more than 1-year experience in Modern Front-End Web Development and <br /> 4 months of Django-related technologies.
           </p>
         </motion.div>
 
@@ -41,8 +41,9 @@ function HeroSection (props) {
           <ul className='w-full flex items-center justify-center'>
             <li className='w-auto px-4 relative after:absolute after:w-[1px] after:h-full after:bg-[#e5e5e5] after:top-0 after:right-0'>
               <a
-                href='#'
-                className='relative '
+                target='_blank'
+                href='https://www.facebook.com/luc.vo.771/'
+                className='relative ' rel='noreferrer'
               >
                 <FiFacebook
                   size={22}
@@ -53,8 +54,9 @@ function HeroSection (props) {
 
             <li className='w-auto px-4 relative after:absolute after:w-[1px] after:h-full after:bg-[#e5e5e5] after:top-0 after:right-0'>
               <a
-                href='#'
-                className='relative '
+                target='_blank'
+                href='https://www.instagram.com/devdayne/'
+                className='relative ' rel='noreferrer'
               >
                 <FaInstagram
                   size={22}
@@ -63,22 +65,23 @@ function HeroSection (props) {
               </a>
             </li>
 
-            <li className='w-auto px-4 relative after:absolute after:w-[1px] after:h-full after:bg-[#e5e5e5] after:top-0 after:right-0'>
-              <a
-                href='#'
-                className='relative '
-              >
-                <FiTwitter
-                  size={22}
-                  className='transition-all duration-500 hover:-translate-y-1/2 text-[#888888] hover:text-[#000]'
-                />
-              </a>
-            </li>
+            {/* <li className='w-auto px-4 relative after:absolute after:w-[1px] after:h-full after:bg-[#e5e5e5] after:top-0 after:right-0'> */}
+            {/*  <a */}
+            {/*    href='#' */}
+            {/*    className='relative ' */}
+            {/*  > */}
+            {/*    <FiTwitter */}
+            {/*      size={22} */}
+            {/*      className='transition-all duration-500 hover:-translate-y-1/2 text-[#888888] hover:text-[#000]' */}
+            {/*    /> */}
+            {/*  </a> */}
+            {/* </li> */}
 
             <li className='w-auto px-4 relative after:absolute after:w-[1px] after:h-full after:bg-[#e5e5e5] after:top-0 after:right-0'>
               <a
-                href='#'
-                className='relative '
+                target='_blank'
+                href='https://github.com/weii1501'
+                className='relative ' rel='noreferrer'
               >
                 <FiGithub
                   size={22}
@@ -89,8 +92,9 @@ function HeroSection (props) {
 
             <li className='w-auto px-4'>
               <a
-                href='#'
-                className='relative '
+                target='_blank'
+                href='https://www.linkedin.com/in/l%E1%BB%B1c-v%C3%B5-%C4%91%E1%BA%AFc-a09aaa290/'
+                className='relative ' rel='noreferrer'
               >
                 <FiLinkedin
                   size={22}
