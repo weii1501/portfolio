@@ -1,11 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /*--background-start-rgb: 214, 219, 220;*/
+  /*--background-end-rgb: 255, 255, 255;*/
+  --background-primary: '#ffffff';
+  --background-secondary: '#f5f8fc';
+  --text-primary: '#1a1a1a';
+  --text-secondary: '#f1f1f1';
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,17 +24,39 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  /*color: rgb(var(--foreground-rgb));*/
+  /*background: linear-gradient(*/
+  /*    to bottom,*/
+  /*    transparent,*/
+  /*    rgb(var(--background-end-rgb))*/
+  /*  )*/
+  /*  rgb(var(--background-start-rgb));*/
+  background-color: var(--background-primary);
+  text-rendering: optimizeLegibility;
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /*color: var(--text-primary);*/
+  font-family: Poppins;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0;
+  word-wrap: break-word;
+  font-weight: 400;
+  /*background-color: #fff;*/
+  /*color: #7e7e7e;*/
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.class {
+  /*font-family: var(--font-poppins);*/
 }
+
+/*.fixed-header {*/
+/*  @apply fixed top-0 left-0 w-full z-50 bg-white shadow-md animate-fade-down;*/
+/*}*/
+
+.container {
+  @apply max-w-[1170px] w-full mx-auto h-auto px-[20px] relative;
+}
+
+
