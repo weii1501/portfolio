@@ -10,12 +10,6 @@ function SiteHeader (props) {
     { rootMargin: '0% 0% -96% 0%' }
   )
 
-  const hover = `before:hover:duration-1000 before:hover:transition-transform before:hover:scale-x-100
-                        before:hover:bg-[#f5f5f5]  before:hover:scale-y-100`
-
-  const active = `before:duration-1000 before:transition-transform before:scale-x-100
-                        before:bg-[#f5f5f5]  before:scale-y-100`
-
   const nonActiveClass = `relative flex items-center justify-center px-[12px] py-[5px] text-[15px] font-thin rounded-[6px]
                         before:hover:duration-1000 before:duration-700 before:ease-in-out before:transform before:origin-left before:scale-x-0
                         before:hover:transition-transform before:hover:bg-[#f5f5f5] before:hover:scale-x-100 before:hover:scale-y-100
@@ -97,26 +91,26 @@ const menuList = [
     text: 'About',
     path: '#about'
   },
-  {
-    icon: '/icons/service.svg',
-    text: 'Service',
-    path: '/service'
-  },
-  {
-    icon: '/icons/portfolio.svg',
-    text: 'Portfolio',
-    path: '/portfolio'
-  },
-  {
-    icon: 'icons/testimonial.svg',
-    text: 'Testimonial',
-    path: '/testimonial'
-  },
-  {
-    icon: '/icons/blog.svg',
-    text: 'Blog',
-    path: '/blog'
-  },
+  // {
+  //   icon: '/icons/service.svg',
+  //   text: 'Service',
+  //   path: '/service'
+  // },
+  // {
+  //   icon: '/icons/portfolio.svg',
+  //   text: 'Portfolio',
+  //   path: '/portfolio'
+  // },
+  // {
+  //   icon: 'icons/testimonial.svg',
+  //   text: 'Testimonial',
+  //   path: '/testimonial'
+  // },
+  // {
+  //   icon: '/icons/blog.svg',
+  //   text: 'Blog',
+  //   path: '/blog'
+  // },
   {
     icon: '/icons/contact.svg',
     text: 'Contact',
