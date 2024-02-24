@@ -1,9 +1,33 @@
+'use client'
 import React from 'react'
+import useSections from '@/hooks/useSections'
+import useScrollSpy from '@/hooks/useSpyScroll'
 
 function SiteHeader (props) {
-  const handleScroll = (e) => {
-    console.log(e)
-  }
+  const sections = useSections()
+  const activeId = useScrollSpy(
+    sections.map(({ id }) => id),
+    { rootMargin: '0% 0% -96% 0%' }
+  )
+
+  const hover = `before:hover:duration-1000 before:hover:transition-transform before:hover:scale-x-100
+                        before:hover:bg-[#f5f5f5]  before:hover:scale-y-100`
+
+  const active = `before:duration-1000 before:transition-transform before:scale-x-100
+                        before:bg-[#f5f5f5]  before:scale-y-100`
+
+  const nonActiveClass = `relative flex items-center justify-center px-[12px] py-[5px] text-[15px] font-thin rounded-[6px]
+                        before:hover:duration-1000 before:duration-700 before:ease-in-out before:transform before:origin-left before:scale-x-0
+                        before:hover:transition-transform before:hover:bg-[#f5f5f5] before:hover:scale-x-100 before:hover:scale-y-100
+                        before:opacity-1 before:absolute before:w-full before:h-full before:top-0 before:left-0 before:z-[-1]
+                        before:bg-transparent before:rounded-[6px]`
+
+  const activeClass = `relative flex items-center justify-center px-[12px] py-[5px] text-[15px] font-thin rounded-[6px]
+                        before:duration-500 before:ease-in-out
+                        before:bg-[#f5f5f5] before:animate-custom-scale-x
+                        before:opacity-1 before:absolute before:w-full before:h-full before:top-0 before:left-0 before:z-[-1]
+                        before:rounded-[6px]`
+  console.log(activeId)
 
   return (
     <header
@@ -11,32 +35,29 @@ function SiteHeader (props) {
     >
       <div className='w-full static h-auto bg-transparent'>
         <div className='flex items-center justify-end h-[80px] px-[40px]'>
-          {/*<div className='w-auto h-auto'>*/}
-          {/*  <a href='/'>*/}
-          {/*    <img*/}
-          {/*      src='/logo.webp'*/}
-          {/*      alt='logo'*/}
-          {/*      height={92}*/}
-          {/*      width={37}*/}
-          {/*      decoding='async'*/}
-          {/*      loading='lazy'*/}
-          {/*      className='w-full h-full text-transparent'*/}
-          {/*    />*/}
-          {/*  </a>*/}
-          {/*</div>*/}
+          {/* <div className='w-auto h-auto'> */}
+          {/*  <a href='/'> */}
+          {/*    <img */}
+          {/*      src='/logo.webp' */}
+          {/*      alt='logo' */}
+          {/*      height={92} */}
+          {/*      width={37} */}
+          {/*      decoding='async' */}
+          {/*      loading='lazy' */}
+          {/*      className='w-full h-full text-transparent' */}
+          {/*    /> */}
+          {/*  </a> */}
+          {/* </div> */}
 
           <div className='h-auto p-0'>
             <div>
-              <ul className='flex items-center justify-end'>
+              <ul className='flex items-center justify-end gap-1'>
                 {menuList.map((item, index) => (
                   <li className='w-auto' key={index}>
                     <div>
                       <a
                         href={item.path}
-                        className='relative flex items-center justify-center px-[12px] py-[5px] text-[15px] font-thin rounded-[6px]
-                                  before:transition-all before:duration-600 before:ease-in-out before:transform before:origin-left before:scale-x-0
-                                  before:hover:transition-transform before:hover:bg-[#f5f5f5] before:hover:scale-x-100 before:hover:scale-y-100 before:opacity-1
-                                  before:absolute before:w-full before:h-full before:top-0 before:left-0 before:z-[-1] before:bg-transparent before:rounded-[6px]'
+                        className={`#${activeId}` === item.path ? activeClass : nonActiveClass}
                       >
                         <img
                           src={item.icon}
@@ -69,12 +90,12 @@ const menuList = [
   {
     icon: '/icons/home.svg',
     text: 'Home',
-    path: '/'
+    path: '#hero'
   },
   {
     icon: 'icons/human.svg',
     text: 'About',
-    path: '/about'
+    path: '#about'
   },
   {
     icon: '/icons/service.svg',

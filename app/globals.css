@@ -23,6 +23,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   /*color: rgb(var(--foreground-rgb));*/
   /*background: linear-gradient(*/
@@ -57,6 +61,52 @@ body {
 
 .container {
   @apply max-w-[1170px] w-full mx-auto h-auto px-[20px] relative;
+}
+
+.custom-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.85);
+  z-index: 99;
+}
+
+.custom-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border: none;
+  background: #fff;
+  overflow: initial;
+  border-radius: 4px;
+  outline: none;
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: all .3s ease;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+a.active:before{
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform .5s;
+}
+
+@keyframes custom-scale-x {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
 }
 
 

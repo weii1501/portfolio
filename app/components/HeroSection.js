@@ -9,7 +9,7 @@ import { FaInstagram } from 'react-icons/fa6'
 
 function HeroSection (props) {
   return (
-    <section className='w-full min-h-[100vh] relative flex items-center justify-center text-center bg-bg-secondary'>
+    <section id='hero' className='w-full min-h-[100vh] relative flex items-center justify-center text-center bg-bg-secondary'>
       <div className='py-[100px] px-[20px]'>
         <div className='mx-auto w-[245px] h-[245px] mb-[15px]'>
           <img
@@ -64,18 +64,6 @@ function HeroSection (props) {
                 />
               </a>
             </li>
-
-            {/* <li className='w-auto px-4 relative after:absolute after:w-[1px] after:h-full after:bg-[#e5e5e5] after:top-0 after:right-0'> */}
-            {/*  <a */}
-            {/*    href='#' */}
-            {/*    className='relative ' */}
-            {/*  > */}
-            {/*    <FiTwitter */}
-            {/*      size={22} */}
-            {/*      className='transition-all duration-500 hover:-translate-y-[5px] text-[#888888] hover:text-[#000]' */}
-            {/*    /> */}
-            {/*  </a> */}
-            {/* </li> */}
 
             <li className='w-auto px-4 relative after:absolute after:w-[1px] after:h-full after:bg-[#e5e5e5] after:top-0 after:right-0'>
               <a

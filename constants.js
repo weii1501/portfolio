@@ -24,3 +24,38 @@ export const skillList = [
     percentage: '50%'
   }
 ]
+
+export const infomation = [
+  {
+    title: 'first name',
+    value: 'Vo Dac'
+  },
+  {
+    title: 'last name',
+    value: 'Luc'
+  },
+  {
+    title: 'age',
+    value: '22 Years'
+  },
+  {
+    title: 'Nationality',
+    value: 'Viet Nam'
+  },
+  {
+    title: 'Address',
+    value: 'Ho Chi Minh City'
+  },
+  {
+    title: 'phone',
+    value: '033 270 6852'
+  },
+  {
+    title: 'email',
+    value: 'vodacluc2001@gmail.com'
+  },
+  {
+    title: 'languages',
+    value: 'Vietnamese, English'
+  }
+]
