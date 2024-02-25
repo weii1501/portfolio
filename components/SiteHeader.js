@@ -126,6 +126,6 @@ const menuList = [
   {
     icon: '/icons/contact.svg',
     text: 'Contact',
-    path: '/contact'
+    path: '#contact'
   }
 ]

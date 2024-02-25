@@ -8,6 +8,7 @@ import ContactCard from '@/app/components/ContactCard'
 export default function ContactSection () {
   return (
     <motion.section
+      id='contact'
       className='w-full h-auto float-left bg-[#f5f8fc] py-[120px]'
       initial='hidden'
       whileInView='show'
