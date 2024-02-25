@@ -25,7 +25,6 @@ const customStyles = {
 // Modal.setAppElement('#yourAppElement')
 
 function AboutSection (props) {
-  let subtitle
   const [modalIsOpen, setIsOpen] = React.useState(false)
 
   function openModal () {
