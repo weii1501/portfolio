@@ -286,7 +286,7 @@ function AboutSection (props) {
       </Modal>
       <motion.div
         variants={staggerContainer}
-        // initial='hidden'
+        initial='hidden'
         whileInView='show'
         viewport={{ once: false, amount: 0.5 }}
         className='container min-h-[100vh]'
