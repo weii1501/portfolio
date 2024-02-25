@@ -289,7 +289,7 @@ function AboutSection (props) {
         initial='hidden'
         whileInView='show'
         viewport={{ once: false, amount: 0.5 }}
-        className='container lg:min-h-auto'
+        className='container lg:min-h-auto md:min-h-auto min-h-[100vh] mx-auto px-[20px] relative'
       >
         <div className='w-full'>
           <TypingTexth3
