@@ -100,6 +100,48 @@ a.active:before{
   transition: transform .5s;
 }
 
+span.toggler-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 25px;
+  height: 2px;
+  margin: auto;
+  background: #fff;
+  color: #fff;
+  transition: .3s;
+}
+
+span.toggler-menu:first-child {
+  top: -15px;
+}
+
+span.toggler-menu:nth-child(2) {
+  top: 1px;
+}
+span.toggler-menu:nth-child(3) {
+  top: auto;
+  bottom: 13px;
+}
+
+.active span.toggler-menu:first-child {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.active span.toggler-menu:nth-child(2) {
+  left: 50%;
+  width: 0;
+}
+
+.active span.toggler-menu:nth-child(3) {
+  top: 15px;
+  transform: rotate(-45deg);
+}
+
+
 @keyframes custom-scale-x {
   0% {
     transform: scaleX(0);

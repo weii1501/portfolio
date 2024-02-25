@@ -3,7 +3,7 @@ import React from 'react'
 import useSections from '@/hooks/useSections'
 import useScrollSpy from '@/hooks/useSpyScroll'
 
-function SiteHeader (props) {
+function SiteHeader ({ active, setActive }) {
   const sections = useSections()
   const activeId = useScrollSpy(
     sections.map(({ id }) => id),
@@ -45,7 +45,7 @@ function SiteHeader (props) {
 
           <div className='h-auto p-0'>
             <div>
-              <ul className='flex items-center justify-end gap-1'>
+              <ul className='lg:flex hidden items-center justify-end gap-1'>
                 {menuList.map((item, index) => (
                   <li className='w-auto' key={index}>
                     <div>
@@ -70,6 +70,19 @@ function SiteHeader (props) {
                   </li>
                 ))}
               </ul>
+
+              <div className='block fixed right-[20px] top-[13px] z-50 lg:hidden'>
+                <button
+                  className='w-[45px] h-[45px] relative rounded-[50%] p-0 bg-black border-0 ml-auto cursor-pointer'
+                  onClick={() => setActive(!active)}
+                >
+                  <div className={active && 'active'}>
+                    <span className='toggler-menu' />
+                    <span className='toggler-menu' />
+                    <span className='toggler-menu' />
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
         </div>
