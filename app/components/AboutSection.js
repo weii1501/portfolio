@@ -41,7 +41,14 @@ function AboutSection (props) {
   }
 
   return (
-    <section id='about' className='w-full h-auto pb-[170px] pt-[120px] overflow-hidden'>
+    <motion.section
+      id='about'
+      className='w-full h-auto pb-[170px] pt-[120px] overflow-hidden'
+      variants={staggerContainer}
+      initial='hidden'
+      whileInView='show'
+      viewport={{ once: false, amount: 0.5 }}
+    >
       <Modal
         isOpen={modalIsOpen}
         onAfterOpen={afterOpenModal}
@@ -284,13 +291,7 @@ function AboutSection (props) {
           </div>
         </div>
       </Modal>
-      <motion.div
-        variants={staggerContainer}
-        initial='hidden'
-        whileInView='show'
-        viewport={{ once: false, amount: 0.5 }}
-        className='container lg:min-h-auto md:min-h-auto min-h-[100vh] mx-auto px-[20px] relative'
-      >
+      <div className='container lg:min-h-auto md:min-h-auto min-h-[100vh] mx-auto px-[20px] relative'>
         <div className='w-full'>
           <TypingTexth3
             title='| About Me'
@@ -363,9 +364,9 @@ function AboutSection (props) {
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
 
-    </section>
+    </motion.section>
   )
 }
 
