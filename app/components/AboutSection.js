@@ -41,9 +41,12 @@ function AboutSection (props) {
   }
 
   return (
-    <section
-        id='about'
-        className='w-full h-auto pb-[170px] overflow-hidden'
+    <motion.section
+      id='about'
+        // className='w-full h-auto pb-[170px] overflow-hidden'
+      className='w-full h-auto float-left bg-white lg:py-[120px] md:py-[120px] py-[0px] overflow-hidden'
+      initial='hidden'
+      whileInView='show'
     >
       <Modal
         isOpen={modalIsOpen}
@@ -287,11 +290,8 @@ function AboutSection (props) {
           </div>
         </div>
       </Modal>
-      <motion.div
-        variants={staggerContainer}
-        initial='hidden'
-        whileInView='show'
-        viewport={{ once: false, amount: 0.5 }}
+      <div
+
         className='container lg:min-h-[100vh] md:min-h-[100vh] mx-auto px-[20px] py-[120px]'
       >
         <div className='w-full'>
@@ -366,9 +366,9 @@ function AboutSection (props) {
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
 
-    </section>
+    </motion.section>
   )
 }
 
