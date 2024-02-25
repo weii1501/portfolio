@@ -54,7 +54,7 @@ function AboutSection (props) {
         <button
           onClick={closeModal}
           type='button'
-          className='absolute bg-transparent flex w-[45px] h-[45px] z-50 -right-[50px] -top-[32px]'
+          className='absolute bg-transparent flex lg:w-[45px] lg:h-[45px] md:w-[45px] md:h-[45px] w-[30px] h-[30px] z-50 lg:-right-[50px] lg:-top-[32px] md:-right-[50px] md:-top-[32px]  right-0 -top-[45px]'
         >
           <img
             src='/icons/cancel.svg'
@@ -69,14 +69,14 @@ function AboutSection (props) {
             }}
           />
         </button>
-        <div className='w-[1070px] h-[75vh] overflow-y-auto'>
-          <div className='px-[50px] relative w-full h-full float-left overflow-y-scroll'>
-            <div className='w-full h-auto grid grid-cols-2 gap-5'>
+        <div className='lg:w-[1070px] md:w-[700px] sm:w-[320px] w-[320px] h-[75vh] overflow-y-auto'>
+          <div className='lg:px-[50px] md:px-[50px] px-[15px] relative w-full h-full float-left overflow-y-scroll'>
+            <div className='w-full h-auto grid lg:grid-cols-2 grid-cols-1 gap-5'>
               <div className='w-full h-auto mt-[50px]'>
                 <h3 className='text-[25px] mb-[35px] pb-[10px] border-b-2 border-dashed border-gray-300 max-w-max font-semibold'>
                   Personal Info
                 </h3>
-                <ul className='w-full grid grid-cols-2 gap-2'>
+                <ul className='w-full grid lg:grid-cols-2 md:grid-cols-2 lg:gap-2 gap-5'>
                   {infomation.map((item, index) => (
                     <li className={`w-full col-span-${item.colspan}`} key={index}>
                       <span className='text-[16px] text-secondary opacity-80 capitalize'>
@@ -87,6 +87,15 @@ function AboutSection (props) {
                       </span>
                     </li>
                   ))}
+                  <li className='mt-[25px] w-full h-auto flex items-center justify-start lg:hidden'>
+                    <a
+                      href='/Frontend-VoDacLuc.pdf'
+                      download='Frontend-VoDacLuc.pdf'
+                      className='px-[35px] py-[8px] text-primary font-medium text-[16px] border-[2px] border-primary rounded-full transition-all duration-500 hover:bg-primary hover:text-bg-secondary hover:scale-105 hover:shadow-xl'
+                    >
+                      Download CV
+                    </a>
+                  </li>
                 </ul>
               </div>
 
