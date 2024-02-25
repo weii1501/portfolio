@@ -3,7 +3,7 @@ import useSections from '@/hooks/useSections'
 import useScrollSpy from '@/hooks/useSpyScroll'
 import Link from "next/link";
 
-function SiteSideBar ({ active }) {
+function SiteSideBar ({ active, setActive }) {
   const sections = useSections()
   const activeId = useScrollSpy(
     sections.map(({ id }) => id),
@@ -24,7 +24,7 @@ function SiteSideBar ({ active }) {
 
   return (
     <div
-      className={`w-[320px] fixed z-50 bg-white top-0 left-0 bottom-0 shadow-md transition-all lg:hidden 
+      className={`lg:w-[320px] w-[280px] fixed z-50 bg-white top-0 left-0 bottom-0 shadow-md transition-all lg:hidden 
                 duration-500 ease-in-out ${active ? 'translate-x-0' : '-translate-x-[100%]'}`}
     >
       <div className='relative h-full'>
@@ -39,6 +39,7 @@ function SiteSideBar ({ active }) {
                     <a
                       href={item.path}
                       className={`#${activeId}` === item.path ? activeClass : nonActiveClass}
+                      onClick={() => setActive(false)}
                     >
                       <img
                         src={item.icon}
@@ -49,7 +50,7 @@ function SiteSideBar ({ active }) {
                         loading='lazy'
                         className='w-[18px] h-[18px] text-transparent mr-[12px] font-thin'
                       />
-                      <span className='font-medium'>
+                      <span className='font-medium lg:text-[15px] md:[14px] '>
                         {item.text}
                       </span>
                     </a>

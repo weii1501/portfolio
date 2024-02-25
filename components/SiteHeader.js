@@ -21,7 +21,6 @@ function SiteHeader ({ active, setActive }) {
                         before:bg-[#f5f5f5] before:animate-custom-scale-x
                         before:opacity-1 before:absolute before:w-full before:h-full before:top-0 before:left-0 before:z-[-1]
                         before:rounded-[6px]`
-  console.log(activeId)
 
   return (
     <header
@@ -71,12 +70,12 @@ function SiteHeader ({ active, setActive }) {
                 ))}
               </ul>
 
-              <div className='block fixed right-[20px] top-[13px] z-50 lg:hidden'>
+              <div className='md:block sm:block  fixed right-[20px] top-[13px] z-50 lg:hidden'>
                 <button
                   className='w-[45px] h-[45px] relative rounded-[50%] p-0 bg-black border-0 ml-auto cursor-pointer'
                   onClick={() => setActive(!active)}
                 >
-                  <div className={active && 'active'}>
+                  <div className={active ? 'active' : ''}>
                     <span className='toggler-menu' />
                     <span className='toggler-menu' />
                     <span className='toggler-menu' />

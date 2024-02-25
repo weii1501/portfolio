@@ -3,7 +3,7 @@
 import React from 'react'
 // import dynamic from 'next/dynamic'
 import SiteHeader from '@/components/SiteHeader'
-import SiteSideBar from "@/components/SiteSideBar";
+import SiteSideBar from '@/components/SiteSideBar'
 
 function SiteLayout (props) {
   const [active, setActive] = React.useState(false)
@@ -14,7 +14,10 @@ function SiteLayout (props) {
         active={active}
         setActive={setActive}
       />
-        <SiteSideBar active={active}/>
+      <SiteSideBar
+        active={active}
+        setActive={setActive}
+      />
       <div className='mt-[80px]'>
         {props.children}
       </div>
